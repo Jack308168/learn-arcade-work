@@ -1,14 +1,3 @@
-"""
-Sprite Collect Coins
-
-Simple program to show basic sprite usage.
-
-Artwork from http://kenney.nl
-
-If Python and Arcade are installed, this example can be run from the command line with:
-python -m arcade.examples.sprite_collect_coins
-"""
-
 import random
 import arcade
 
@@ -24,10 +13,9 @@ SCREEN_TITLE = "Sprite Collect Coins Example"
 
 
 class MyGame(arcade.Window):
-    """ Our custom Window Class"""
+    
 
     def __init__(self):
-        """ Initializer """
         # Call the parent class initializer
         super().__init__(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_TITLE)
 
@@ -47,7 +35,7 @@ class MyGame(arcade.Window):
         arcade.set_background_color(arcade.color.AMAZON)
 
     def setup(self):
-        """ Set up the game and initialize the variables. """
+        
 
         # Sprite lists
         self.player_list = arcade.SpriteList()
@@ -104,7 +92,6 @@ class MyGame(arcade.Window):
             self.bad_coin_list.append(coin)
 
     def on_draw(self):
-        """ Draw everything """
         arcade.start_render()
         if self.lives < 0:
             #draw a picture of game over screen
@@ -125,14 +112,14 @@ class MyGame(arcade.Window):
 
 
     def on_mouse_motion(self, x, y, dx, dy):
-        """ Handle Mouse Motion """
+        
 
         # Move the center of the player sprite to match the mouse x, y
         self.player_sprite.center_x = x
         self.player_sprite.center_y = y
 
     def on_update(self, delta_time):
-        """ Movement and game logic """
+        
 
         # Call update on all sprites (The sprites don't do much in this
         # example though.)
